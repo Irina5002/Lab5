@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        table {
+          border-collapse: collapse;
+          margin-top: 20px;
+        }
+        th, td {
+          border: 1px solid black;
+        }
+    </style>
+    <script type="text/javascript">
+            function ran(){ 
+            
+            var t = "<table>";
+            var stroki = document.getElementById("stroki").value;  
+            var stolbiki = document.getElementById("stolbiki").value;  //получил значение из input
+            var x = parseInt(stroki);
+            var y = parseInt(stolbiki); //преобразовал из строки в число
+            for(var i = 0; i < x; i++){
+                t += "<tr>"  + "</tr>"; 
+                for(var j=0; j < y; j++){
+                    t += "<td>" + (Math.random() * 9 + 1) + "</td>";  
+                }
+            }
+            if ((x/1) && (y/1))
+            document.body.innerHTML += t;
+            else alert ("Пожалуйста, введите число")
+            }
+    </script>
+
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Строки" id="stroki"> 
+        <input type="text" placeholder="Столбцы" id="stolbiki">
+        <button type="button" id="button" onclick="ran()">Создать</button>
+    </form>
+</body>
+</html>

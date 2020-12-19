@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <style>
+      #text{
+        width: 600px;
+        height: 2500px;
+        background-color: rgb(89, 153, 161);
+      }
+    #scr {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        opacity: 0;
+        font-size: 25px;
+        font-style: bold;
+}
+       /* @media (max-width: 1365px){
+            #scr{
+                display: none;
+            }
+        }
+        @media (min-width: 1367px) and(max-width: 1799px){
+            #scr{
+                display: none;
+            }
+        }
+        @media(min-width: 1800px){
+        #scr {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        opacity: 0;
+        font-size: 25px;
+        font-style: bold;
+        text-align: center;
+        }
+      }*/
+  </style>
+  <script type="text/javascript">
+    window.onscroll = function() {
+   		var scrollElem = document.getElementById("scr");
+  		if (window.pageYOffset > document.documentElement.clientHeight) {
+     	scrollElem.style.opacity = "1";
+   		} else {
+       	scrollElem.style.opacity = "0";
+   }
+}
+	var timeOut;
+function pic() {
+      window.scrollTo(pageXOffset,0);}
+      </script>
+ </head>
+ <body>
+    <center><div id="text"><p>Очень интересный и длинный текст</p></div></center>
+	<div id="scr" onclick="pic();"><img src="strel.png"></div>
+ </body>
+</html>
